@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-    background-color: #f0f0f0; 
+    background-color: #11053b; 
     padding: 10px;
     position: fixed; 
     top: 0;
@@ -22,22 +22,28 @@ nav {
     margin-right: 20px; 
   }
   nav ul {
+    display: flex;
     list-style: none; 
     margin: 0;
     padding: 0;
     list-style: none; 
+    
    
   }
   nav li {
     display: inline; 
     margin-right: 20px; 
+    justify-content: center;
+    align-items: center;
+    
   }
   nav a {
     text-decoration: none;
-    color: #333;
+    color: #eef5eb;
     font-weight: bold;
   }
   nav a:hover {
-    color: #007bff; 
+    color: black;
+    background-color: white;
   }
  
