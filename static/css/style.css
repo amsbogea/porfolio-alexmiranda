@@ -1,0 +1,264 @@
+/*Reset da pagina*/
+* {
+  margin: 0 ;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Estilizaçao do body*/
+body {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Primeira div*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div1, .div2, .div3, .div4, .div5 {
+  width: 200px; /* ajuste o tamanho das divs aqui */
+  height: 200px; /* ajuste o tamanho das divs aqui */
+  margin: 0px;
+}
+
+.div1 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height:  600px;
+  border-bottom: 5px #ccc solid;
+}
+
+.logo {
+  width: 80px;  
+  height: 80px;
+  margin: 20px;
+}
+
+.div1 h1 {
+  font-weight: 500;
+  font-size: 65px;
+  text-align: left;
+  color: #fff;
+  text-decoration-line: underline;
+  margin-left: 30px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.div1 p {
+  font-weight: 200;
+  font-size: 41px;
+  text-align: left;
+  color: #fff;
+  margin: 30px;
+
+}
+
+/* Segunda div*/
+.div2 {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height:  600px;
+  border-bottom: 5px #ccc solid;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente a imagem dentro da div */
+  justify-content: flex-start; /* Alinha a imagem à esquerda */
+  padding: 0; /* Remove qualquer padding */
+  margin: 0; /* Remove qualquer margem */
+  height: 100vh; /* Define a altura da div para que possamos ver o efeito de centralização */
+}
+
+.qualificacao-img {
+  margin: 0; /* Remove a margem da imagem */
+  padding: 0; /* Remove o padding da imagem */
+  width: 500px;
+  display: flex;
+  align-items: center;
+  float: left;
+  flex-wrap: wrap;
+
+}
+
+.qualificacao-titulo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: none;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 50px;
+  text-align: right;
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-bottom:40px;
+
+}
+
+.qualificacao-texto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 25px;
+  text-align: justify;
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 30px;
+  float: right;
+  padding: 20px 30px 30px 50px;
+
+}
+
+.qualificacao-btn {
+  /*
+  background-color: #fff;
+  display: flex;
+  padding: 10px;  
+  */
+  font-weight: 700;
+  font-size: 20px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border: #ccc 1px solid;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.qualificacao-btn:before {
+  content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.qualificacao-btn:active {
+  color: #000
+}
+
+.qualificacao-btn:active:after {
+  background: transparent;
+}
+
+.qualificacao-btn:hover:before {
+  opacity: 1;
+}
+
+.qualificacao-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Terceira div*/
+.div3 {
+  background-color: black;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    border-bottom: 5px #ccc solid;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.div3_img  {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.img_servicos {
+  width: 80%;
+}
+
+
+.servicos-titilo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.servicos-h3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.servicos-paragrafo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 25px;
+  text-align: justify;
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* Quarta div*/
+
+/* Quinta div*/
+
