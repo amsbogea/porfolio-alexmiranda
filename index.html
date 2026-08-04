@@ -1,56 +1,99 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Miranda | Miranda Tecnologia Empresarial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap">
   <link rel="stylesheet" href="static/css/style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="div1" style="background-image: url('static/img/Alex_Miranda.png');">
-      <img class="logo" src="static/img/logo.png" alt="Logomarca">
-      <h1>Portfólio <br>Alex Miranda da Silva</h1>
-      <p>Analista de Sistemas<br> Analista de infraestura de TI <br> ERP Protheus (TOTVS) | Implantação e Suporte </p>
+  <header class="hero" id="topo">
+    <nav class="top-nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#casos">Casos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img class="logo" src="static/img/logo.png" alt="Logo Alex Miranda">
+      <h1>Portfólio Alex Miranda da Silva</h1>
+      <p>Analista de Sistemas · Analista de Infraestrutura de TI · ERP Protheus (TOTVS)</p>
+      <a class="cta-btn" href="#contato">Vamos conversar</a>
     </div>
+  </header>
 
-    <div class="div2">
-      <img class="qualificacao-img" src="static/img/qualificacao.png"
-        alt="Qualificação Profissional">
-      <div class="qualificacao-conteudo">
-        <h2 class="qualificacao-titulo">Qualificação Profissional</h2>
-        <p class="qualificacao-texto">
-          Bacharel em Sistemas de Informação, Técnico de Infraestrutura de TI e
-          Especialista em Segurança. Atualmente focado em soluções Web Full Stack.
-        </p>
-        <button class="qualificacao-btn" type="button">Saiba Mais</button>
+  <main class="container">
+    <section id="sobre" class="section section-sobre">
+      <div class="section-card">
+        <img class="qualificacao-img" src="static/img/qualificacao.png" alt="Qualificação Profissional">
+        <div class="section-text">
+          <h2>Qualificação Profissional</h2>
+          <p>Bacharel em Sistemas de Informação, especialista em segurança e analista de infraestrutura e ERP Protheus (TOTVS). Trabalho para garantir alta disponibilidade, proteção de dados e eficiência operacional em ambientes críticos.</p>
+          <a class="secondary-btn" href="#servicos">Saiba mais</a>
+        </div>
       </div>
+    </section>
+
+    <section id="servicos" class="section section-services">
+      <div class="section-header">
+        <h2>Principais Serviços</h2>
+        <p>Atendimento completo em ERP, infraestrutura de TI, segurança da informação e diagnósticos técnicos.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Suporte & Consultoria Protheus (TOTVS)</h3>
+          <p>Implantação, parametrização, suporte a usuários, manutenção de módulos e otimização de processos no ERP.</p>
+        </article>
+        <article class="service-card">
+          <h3>Gestão de Infraestrutura de TI</h3>
+          <p>Configuração e administração de servidores, redes, ativos de TI e monitoramento de disponibilidade.</p>
+        </article>
+        <article class="service-card">
+          <h3>Segurança da Informação & Backup</h3>
+          <p>Implementação de políticas de segurança, gestão de acesso, firewalls e planos de disaster recovery.</p>
+        </article>
+        <article class="service-card">
+          <h3>Auditoria e Diagnóstico de TI</h3>
+          <p>Avaliação do ambiente de TI para identificar gargalos, vulnerabilidades e oportunidades de melhoria.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="casos" class="section section-cases">
+      <div class="section-header">
+        <h2>Casos de Sucesso</h2>
+        <p>Projetos com foco em transição de sistemas, melhoria de infraestrutura e continuidade segura de operações.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Troca de sistemas</h3>
+          <p>Migração e implantação do Protheus com mínimo impacto operacional e integração de processos.</p>
+        </article>
+        <article class="service-card">
+          <h3>Reestruturação de TI</h3>
+          <p>Reorganização de rede e servidores para ampliar disponibilidade, estabilidade e suporte técnico.</p>
+        </article>
+        <article class="service-card">
+          <h3>Segurança e backup</h3>
+          <p>Rotinas automatizadas de backup e políticas de segurança para proteger dados críticos e reduzir riscos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-content">
+      <p>Entre em contato para consultoria, implantação ou suporte de TI.</p>
+      <p>Email: <a href="mailto:contato@mirandatecnologia.com.br">contato@mirandatecnologia.com.br</a></p>
     </div>
-
-    <div class="div3">
-      <div class="div3_img">
-        <h2 class="servicos-titilo">Principais Serviços</h2>
-        <img class="img_servicos" src="static/img/servicos.png" alt="Serviços de TI">
-      </div>
-
-      <div class="servicos-lista">
-        <h3 class="servicos-h3">Criação de Sites</h3>
-        <p class="servicos-paragrafo">Colocamos seu negócio no mundo digital com sites modernos e responsivos.</p>
-
-        <h3 class="servicos-h3">Sistemas ERP Web</h3>
-        <p class="servicos-paragrafo">Gestão acessível de qualquer lugar com a segurança que sua infraestrutura exige.
-        </p>
-
-        <h3 class="servicos-h3">Sistema de E-commerce</h3>
-        <p class="servicos-paragrafo">Sua loja online vendendo 24 horas por dia, 7 dias por semana.</p>
-      </div>
-    </div>
-  </div>
+  </footer>
 </body>
 
 </html>

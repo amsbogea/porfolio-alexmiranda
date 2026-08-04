@@ -1,149 +1,260 @@
-/* Reset e Configurações Globais */
+﻿:root {
+  --bg: #040404;
+  --surface: rgba(12, 12, 12, 0.95);
+  --text: #f5f5f5;
+  --muted: #c2c2c2;
+  --accent: #4cff00;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Play", sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
 }
 
-/* Container Principal */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+.cta-btn,
+.secondary-btn {
+  border: none;
+  font: inherit;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
 }
 
-/* Configuração Geral das Seções (Divs) */
-.div1, .div2, .div3 {
-  width: 100%;
-  min-height: 100vh; /* Ocupa a altura total da tela */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  border-bottom: 5px #ccc solid;
-}
-
-/* Primeira Div - Hero */
-.div1 {
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('static/img/Alex_Miranda.png');
   background-size: cover;
   background-position: center;
-  text-align: left;
-  align-items: flex-start; /* Alinha texto à esquerda no desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85));
+}
+
+.top-nav {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.top-nav a {
+  color: var(--text);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.top-nav a:hover {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  padding: 48px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
 }
 
 .logo {
-  width: 80px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  margin-left: 18px;
+  width: 96px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.div1 h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem); /* Tamanho de fonte fluido */
-  text-decoration: underline;
-  margin-left: 20px;
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  margin-bottom: 16px;
+  line-height: 1.05;
 }
 
-.div1 p {
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
-  margin-left: 20px;
-  font-weight: 200;
-}
-
-/* Segunda Div - Qualificação (Layout Lado a Lado) */
-.div2 {
-  flex-direction: row; /* Imagem e texto lado a lado */
-  flex-wrap: wrap; 
-  background-color: #000;
-}
-
-.qualificacao-img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.qualificacao-conteudo {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-}
-
-.qualificacao-titulo {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.qualificacao-texto {
+.hero p {
   font-size: 1.2rem;
-  font-weight: 100;
-  text-align: justify;
-}
-
-/* Botão com Efeito */
-.qualificacao-btn {
-  margin-top: 30px;
-  padding: 15px 30px;
-  font-weight: 700;
-  background: #111;
-  color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* Terceira Div - Serviços */
-.div3 {
-  background-color: #000;
-}
-
-.img_servicos {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
-}
-
-.servicos-titilo {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-.servicos-item {
-  max-width: 800px;
+  color: var(--muted);
   margin-bottom: 30px;
+}
+
+.cta-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(76, 255, 0, 0.2);
+}
+
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
   text-align: center;
 }
 
-.servicos-h3 {
-  font-size: 1.8rem;
-  color: #48ff00; /* Destaque para os títulos de serviço */
+.section-header h2 {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  margin-bottom: 16px;
 }
 
-/* --- RESPONSIVIDADE (Telemóveis) --- */
-@media (max-width: 768px) {
-  .div2 {
-    flex-direction: column; /* Empilha imagem e texto no telemóvel */
+.section-header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.section-card,
+.services-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.section-sobre .section-card {
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+}
+
+.section-sobre img {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+}
+
+.section-sobre .section-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+}
+
+.section-sobre .section-text p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+
+.service-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.service-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.site-footer {
+  background: #050505;
+  padding: 40px 24px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer-content a {
+  color: var(--accent);
+}
+
+@media (max-width: 992px) {
+  .section-sobre .section-card {
+    grid-template-columns: 1fr;
   }
 
-  .div1 h1, .div1 p {
-    margin-left: 0;
-    text-align: center;
-    width: 100%;
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 24px;
   }
 
-  .div1 {
-    align-items: center;
+  .top-nav {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .hero-content {
+    padding: 32px 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
   }
 }
