@@ -1,14 +1,15 @@
 ﻿:root {
-  --bg: #040404;
-  --surface: rgba(12, 12, 12, 0.95);
-  --text: #f5f5f5;
-  --muted: #c2c2c2;
-  --accent: #4cff00;
-  --border: rgba(255, 255, 255, 0.08);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --bg: #0A1D3B;
+  --bg-alt: #08182F;
+  --panel: rgba(10, 29, 59, 0.92);
+  --panel-soft: rgba(14, 45, 73, 0.75);
+  --text: #C4F2F2;
+  --muted: #9ECFD6;
+  --accent: #3290A6;
+  --accent-soft: #6AD9D9;
+  --border: rgba(100, 196, 209, 0.16);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
 }
-
-
 
 * {
   margin: 0;
@@ -18,7 +19,7 @@
 
 body {
   font-family: "Play", sans-serif;
-  background-color: var(--bg);
+  background: linear-gradient(180deg, #0A1D3B 0%, #08182F 100%);
   color: var(--text);
   line-height: 1.7;
 }
@@ -33,7 +34,6 @@ img {
   max-width: 100%;
 }
 
-
 button,
 .cta-btn,
 .secondary-btn {
@@ -44,100 +44,118 @@ button,
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 44px 24px;
 }
 
 .hero {
   position: relative;
   min-height: 85vh;
-  background-image: url('static/img/Alex Miranda.png');
+  background-image: linear-gradient(180deg, rgba(10, 29, 59, 0.62), rgba(8, 24, 47, 0.88)),
+    url('static/img/luca-bravo-XJXWbfSo2f0-unsplash.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 32px 24px;
+  padding: 34px 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(106, 217, 217, 0.12), transparent 28%);
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.85));
-  
-}
-
-.hero-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 820px;
-  padding: 36px 30px;
-  background: rgba(0, 0, 0, 0.42);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
-  background-image: url('static/img/Alex_Miranda.png');
+  background: linear-gradient(180deg, rgba(10, 29, 59, 0.5), rgba(8, 24, 47, 0.85));
+  pointer-events: none;
 }
 
 .top-nav {
   position: absolute;
-  top: 24px;
+  top: 28px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 22px;
+  gap: 18px;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .top-nav a {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(10, 29, 59, 0.78);
   color: var(--text);
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
+  opacity: 0.94;
+  transition: all 0.24s ease;
 }
 
 .top-nav a:hover {
-  opacity: 1;
+  color: var(--accent-soft);
+  background: rgba(50, 144, 166, 0.16);
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 940px;
-  padding: 48px;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid var(--border);
-  border-radius: 28px;
+  z-index: 2;
+  max-width: 860px;
+  padding: 48px 42px;
+  background: var(--panel);
+  border: 1px solid rgba(50, 144, 166, 0.22);
+  border-radius: 32px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
-/*
-.logo {
-  width: 96px;
-  margin-bottom: 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.hero-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 780px;
+  margin: 0 auto 30px;
+  padding: 14px 20px;
+  background: rgba(10, 29, 59, 0.72);
+  border: 1px solid rgba(106, 217, 217, 0.18);
+  border-radius: 999px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
-*/
+
+.hero-banner img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-banner span {
+  color: #E5FBFD;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
 
 .hero h1 {
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  margin-bottom: 16px;
-  line-height: 1.05;
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 18px;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: var(--muted);
-  margin-bottom: 30px;
+  font-size: 1.15rem;
+  color: #D9F9FA;
+  margin-bottom: 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-btn,
@@ -145,22 +163,24 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
+  padding: 16px 36px;
   border-radius: 999px;
-  background: var(--accent);
-  color: #0a0a0a;
+  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+  color: #0A1D3B;
   font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .cta-btn:hover,
 .secondary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(76, 255, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 55px rgba(50, 144, 166, 0.24);
+  filter: brightness(1.08);
 }
 
 .section {
-  padding: 80px 0;
+  padding: 90px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -169,19 +189,21 @@ button,
 }
 
 .section-header {
-  max-width: 760px;
-  margin: 0 auto 40px;
+  max-width: 720px;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
 .section-header h2 {
-  font-size: clamp(2.2rem, 3vw, 3rem);
-  margin-bottom: 16px;
+  font-size: clamp(2.3rem, 3vw, 3.3rem);
+  margin-bottom: 18px;
+  color: #E5FBFD;
 }
 
 .section-header p {
-  color: var(--muted);
+  color: #B6DBDE;
   font-size: 1rem;
+  line-height: 1.8;
 }
 
 .section-card,
@@ -197,17 +219,18 @@ button,
 
 .section-sobre img {
   width: 100%;
-  border-radius: 24px;
-  border: 1px solid var(--border);
+  border-radius: 28px;
+  border: 1px solid rgba(50, 144, 166, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
 }
 
 .section-sobre .section-text h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 18px;
 }
 
 .section-sobre .section-text p {
-  color: var(--muted);
+  color: #D4F5F5;
   margin-bottom: 24px;
 }
 
@@ -216,38 +239,75 @@ button,
 }
 
 .service-card {
-  padding: 28px;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+  position: relative;
+  padding: 32px;
+  border-radius: 30px;
+  background: rgba(10, 29, 59, 0.9);
+  border: 1px solid rgba(50, 144, 166, 0.14);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(50, 144, 166, 0.08), transparent 38%);
+  pointer-events: none;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 68px rgba(0, 0, 0, 0.22);
+}
+
+.service-card h3,
+.service-card p,
+.service-card li,
+.service-card h4 {
+  position: relative;
+  z-index: 1;
 }
 
 .service-card h3 {
   font-size: 1.45rem;
   margin-bottom: 14px;
-  color: var(--accent);
+  color: var(--accent-soft);
 }
 
-.service-card p {
-  color: var(--muted);
-  line-height: 1.65;
+.service-card h4 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: #C4F2F2;
+}
+
+.service-card p,
+.service-card li {
+  color: #B6DBDE;
+  line-height: 1.8;
+}
+
+.service-card li {
+  margin-bottom: 0.9rem;
 }
 
 .site-footer {
-  background: #050505;
-  padding: 40px 24px;
+  background: linear-gradient(180deg, #0A1D3B 0%, #08182F 100%);
+  padding: 52px 24px;
+  border-top: 1px solid rgba(196, 242, 242, 0.10);
 }
 
 .footer-content {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  color: var(--muted);
+  color: #B6DBDE;
 }
 
 .footer-content a {
-  color: var(--accent);
+  color: var(--accent-soft);
+  text-decoration: underline;
 }
 
 @media (max-width: 992px) {
@@ -268,11 +328,11 @@ button,
   .top-nav {
     position: static;
     transform: none;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .hero-content {
-    padding: 32px 24px;
+    padding: 32px 26px;
   }
 
   .services-grid {
