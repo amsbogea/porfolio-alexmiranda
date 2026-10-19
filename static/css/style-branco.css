@@ -1,188 +1,188 @@
 /* ==========================================================================
-CONFIGURAÇÕES GERAIS / RESET
+   CONFIGURAÇÕES GERAIS / RESET
    ========================================================================== */
 
-/* Remove margens e preenchimentos padrão do navegador */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* Garante que padding e bordas não alterem o tamanho final dos elementos */
 }
 
-/* Estilização base do corpo da página */
 body {
     font-family: 'Play', sans-serif;
-    background-color: #c2bebd;
-    color: #000000;
+    background-color: #f4f4f6;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
-
 
 /* ==========================================================================
-    CABEÇALHO E NAVEGAÇÃO
+   CABEÇALHO E NAVEGAÇÃO (FLEXBOX)
    ========================================================================== */
 
-/* Barra superior da página */
 header {
-    background-color: #c2bebd;
-    padding: 20px;
-    text-align: center;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Links do menu de navegação */
+header nav.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 header nav a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-/* Efeito visual ao passar o mouse sobre os links do menu */
 header nav a:hover {
+    color: #0052ff;
     text-decoration: underline;
 }
 
-
 /* ==========================================================================
-    BANNER DE APRESENTAÇÃO (HERO SECTION)
+   BANNER DE APRESENTAÇÃO / HERO SECTION (FLEXBOX + POSICIONAMENTO)
    ========================================================================== */
 
-/* Container pai do banner: serve de referência relativa para o texto absoluto */
 .hero-section {
     position: relative;
-    /* Define este bloco como âncora de coordenadas para os filhos absolutos */
     width: 100%;
-    /* Ocupa a largura total da janela */
     overflow: hidden;
-    /* Evita que elementos filhos ultrapassem os limites da seção */
+    height: 80vh;
+    min-height: 500px;
+    background-color: #000000;
 }
 
-/* Imagem de fundo do banner */
 .hero-imagem img {
     width: 100%;
-    /* Ocupa toda a largura disponível */
-    height: 80vh;
-    /* Define a altura como 80% da altura da tela visível */
+    height: 100%;
     object-fit: cover;
-    /* Recorta e enquadra a imagem sem distorcer as proporções */
     display: block;
-    /* Remove o espaço em branco padrão na base de elementos inline */
+    opacity: 0.85;
 }
 
-/* Caixa com os textos sobrepostos à imagem */
 .hero-texto {
     position: absolute;
-    /* Tira o elemento do fluxo padrão e posiciona sobre a imagem */
     top: 50%;
-    /* Move o topo da caixa até a metade vertical da imagem */
-    left: 14%;
-    /* Cria um espaçamento fluido a partir da borda esquerda */
+    left: 10%;
     transform: translateY(-50%);
-    /* Puxa 50% da própria altura para cima, centralizando na vertical */
-    max-width: 520px;
-    /* Trava a largura máxima para não sobrepor os itens da direita */
+    max-width: 580px;
     color: #ffffff;
-    /* Define a cor do texto como branco para contraste */
     display: flex;
-    /* Ativa o Flexbox para empilhar os textos verticalmente */
     flex-direction: column;
-    /* Organiza os filhos (título, parágrafos, botão) em coluna */
     align-items: flex-start;
-    /* Alinha os itens à esquerda dentro do próprio container */
     gap: 18px;
-    /* Espaço uniforme entre cada linha de texto e botão */
     text-align: left;
-    /* Garante o alinhamento do texto à esquerda */
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 32px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
 }
 
-/* Título principal do banner */
 .hero-texto h1 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    color: #ffffff;
 }
 
-/* Subtítulo / linha de especialidades */
 .hero-texto .cargo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: #e0e0e0;
     line-height: 1.4;
 }
 
-/* Frase descritiva de consultoria */
 .hero-texto .descricao {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    color: #cccccc;
     line-height: 1.4;
-    opacity: 0.9;
-    /* Deixa o texto levemente mais suave */
 }
 
-/* Botão de ação (Call to Action - CTA) */
 .hero-texto .cta-btn {
     background-color: #0052ff;
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 12px 28px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    /* Transição suave na mudança de cor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efeito hover do botão */
 .hero-texto .cta-btn:hover {
-    filter: brightness(0.80);
-    /* Reduz o brilho em 20%, escurecendo de forma natural */
+    background-color: #003ebd;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
-    QUALIFICAÇÃO E SOBRE
+   LAYOUT GERAL DA PÁGINA (GRID PRINCIPAL COM MAIN E ASIDE)
+   ========================================================================== */
+
+.layout-geral {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE (FLEXBOX)
    ========================================================================== */
 
 #sobre {
+    grid-column: 1;
     display: flex;
     align-items: center;
-    /* Centraliza a imagem verticalmente em relação ao bloco de texto */
-    gap: 40px;
-    /* Espaço uniforme entre a foto e o texto */
-    margin: 60px 0 60px 14%;
-    /* 15% na esquerda alinha perfeitamente com o texto do banner */
-    max-width: 1200px;
+    gap: 32px;
+    background-color: #ffffff;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
 
 .qualificacao-img {
-    width: 320px;
-    height: 320px;
-    /* Altura igual à largura garante o círculo perfeito */
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    /* Enquadra a imagem sem achatar */
     border-radius: 50%;
-    /* Arredonda em formato de círculo */
     flex-shrink: 0;
-    /* Impede a imagem de amassar caso o texto seja grande */
+    border: 4px solid #0052ff;
 }
 
 .sobre-texto {
-    max-width: 650px;
+    flex: 1;
     text-align: justify;
 }
 
 .sobre-texto h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
 }
 
 .sobre-texto p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: #444444;
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .linkedin-btn {
     display: inline-block;
-    /* Permite aplicar margens e padding corretos ao link */
     margin-top: 10px;
     background-color: #0052ff;
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -190,71 +190,202 @@ header nav a:hover {
 }
 
 .linkedin-btn:hover {
-    filter: brightness(0.80);
+    background-color: #003ebd;
 }
 
 /* ==========================================================================
-   SESSAO E SERVIÇOS
+   SEÇÕES DE SERVIÇOS E CASOS (GRID DE CARDS + FLEXBOX INTERNO)
    ========================================================================== */
 
-#servicos {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(2, 1fr); /* 📐 Cria 2 colunas de largura igual */
-    background-color: #000000;
-    color: #ffffff;
-    padding: 60px 0;
+.section-services,
+.section-cases {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    background-color: #ffffff;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
 
-.section-services {
-    display: flex;
-    flex-direction: \;
-    grid-template-columns: repeat(2, 1fr); /* 📐 Cria 2 colunas de largura igual */
-    gap: 24px;     
-    padding: 60px 8%;                      /* Mantém o alinhamento com a margem do site */                        /* ↔️ Espaçamento uniforme entre os cards */
-}
-
-.section-services h2{
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    grid-column: 1 / -1;                   /* 📌 Ocupa a linha inteira de ponta a ponta */
+.section-services h2,
+.section-cases h2 {
+    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    color: #1a1a1a;
     text-align: center;
+    margin-bottom: 4px;
 }
 
-.section-services p{
-    display: flex;
-    justify-content: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
+.section-services > p,
+.section-cases > p {
+    grid-column: 1 / -1;
+    font-size: 1.05rem;
+    color: #666666;
+    text-align: center;
     margin-bottom: 16px;
-    grid-column: 1 / -1;                   /* 📌 Ocupa a linha inteira de ponta a ponta */
-  text-align: center;
 }
 
+/* Cards individuais usam Flexbox para empilhar e alinhar conteúdo */
 .service-card {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
-    color: #000000;
+    gap: 12px;
+    background-color: #f9f9fb;
+    color: #1a1a1a;
     padding: 24px;
-    border: 1px solid #e0e0e0;    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-.service-card h3 {
-    
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+    border: 1px solid #e0e0e8;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    color: #0052ff;
+    margin-bottom: 8px;
+}
+
 .service-card p {
-    padding: 20px;
-    border-radius: 8px;
-    text-align: justify;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.service-card ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-card li {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   PAINEL LATERAL / SIDEBAR (GRID ITEM COM POSITION STICKY)
+   ========================================================================== */
+
+.perfil-destaques {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.perfil-destaques h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    border-bottom: 2px solid #0052ff;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.perfil-destaques h4 {
+    font-size: 1.1rem;
+    color: #0052ff;
+    margin-top: 8px;
+}
+
+.perfil-destaques ul {
+    list-style-type: square;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.perfil-destaques li {
+    font-size: 0.95rem;
+    color: #444444;
+}
+
+/* ==========================================================================
+   RODAPÉ (FLEXBOX)
+   ========================================================================== */
+
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 36px 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.site-footer a {
+    color: #6ad9d9;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .layout-geral {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-destaques {
+        grid-column: 1;
+        grid-row: auto;
+        position: static;
+    }
+
+    .hero-texto {
+        left: 5%;
+        right: 5%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto {
+        text-align: left;
+    }
+
+    .section-services,
+    .section-cases {
+        grid-template-columns: 1fr;
+    }
+
+    header nav.top-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
 }
