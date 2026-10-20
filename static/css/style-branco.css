@@ -258,3 +258,14 @@ header nav a:hover {
     text-align: justify;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* ==========================================================================
+   ACESSIBILIDADE DE TECLADO / FOCO VISÍVEL
+   ========================================================================== */
+
+header nav a:focus-visible,
+.hero-texto .cta-btn:focus-visible,
+.linkedin-btn:focus-visible {
+    outline: 3px solid #0052ff;
+    outline-offset: 3px;
+}
