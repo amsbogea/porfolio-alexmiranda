@@ -1,189 +1,477 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Miranda | Miranda Tecnologia Empresarial</title>
+  <meta name="description" content="Alex Miranda | Consultoria Especializada em TI, Infraestrutura Crítica, ERP TOTVS Protheus e Engenharia de Dados.">
+  <title>Alex Miranda | Consultoria em TI & ERP Protheus</title>
+
+  <!-- Tipografia Oficial (Play) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap">
-  <link rel="stylesheet" href="static/css/style-branco.css">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
 
-  <!-- 🧭 Cabeçalho / Navegação -->
-  <header class="hero" id="topo">
-    <nav class="top-nav">
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#casos">Casos</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <!-- 🧭 Barra de Navegação Executiva Fixa -->
+  <header class="header-nav" id="topo">
+    <div class="nav-container">
+      <a href="#topo" class="nav-brand">
+        <span class="brand-name">ALEX MIRANDA</span>
+        <span class="brand-badge">TI &middot; ERP &middot; DADOS</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Soluções</a>
+        <a href="#casos" class="nav-link">Casos de Sucesso</a>
+        <a href="#competencias" class="nav-link">Competências</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <a href="https://wa.me/5571986168681" target="_blank" rel="noopener noreferrer" class="nav-cta">
+        <span>Fale Comigo</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
   </header>
 
-  <section id="apresentacao" class="hero-section">
-    <!-- 📝 Lado do texto -->
-    <article class="hero-texto">
-      <h1>Alex Miranda da Silva</h1>
-      <p class="cargo">Analista de Infraestrutura · Analista de Sistemas · Engenharia de Dados · ERP Protheus</p>
-      <p class="descricao">Consultoria de TI e ERP para empresas com estratégia, dados e infraestrutura.</p>
-      <a class="cta-btn" href="https://wa.me/5571986168681" target="_blank">Vamos conversar</a>
-    </article>
+  <main>
+    <!-- ⚡ Hero Section / Banner de Fundo de Alto Impacto -->
+    <section id="apresentacao" class="hero-section">
+      <div class="hero-container">
+        <!-- Conteúdo do Banner -->
+        <article class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Disponível para Consultoria e Projetos Corporativos</span>
+          </div>
 
-    <!-- 🖼️ Lado da imagem -->
-    <figure class="hero-imagem">
-      <img src="static/img/Alex_Miranda.png" alt="Foto de Alex Miranda">
-    </figure>
-  </section>
+          <h1 class="hero-title">Alex Miranda da Silva</h1>
+          <p class="hero-role">Infraestrutura Crítica &middot; ERP TOTVS Protheus &middot; Engenharia de Dados</p>
 
-  <!-- 📦 Container Principal -->
-  <main class="layout-geral">
+          <p class="hero-description">
+            Mais de uma década assegurando estabilidade, governança e alta disponibilidade para operações de missão crítica.
+            Conecto a solidez da infraestrutura e dos servidores à inteligência de dados e processos empresariais no ERP Protheus.
+          </p>
 
-    <!-- 👤 Seção Sobre -->
-    <section id="sobre">
-      <img class="qualificacao-img" src="static/img/qualificacao.png" alt="Qualificação Profissional">
-      <article class="sobre-texto">
-        <h2>Qualificação Profissional</h2>
-        <p>Bacharel em Sistemas de Informação e pós-graduado em Engenharia de Dados, com formação sólida em tecnologia,
-          dados e infraestrutura. Com mais de 10 anos de experiência na área de Tecnologia da Informação, desenvolvi uma
-          trajetória voltada à operação, sustentação e evolução de ambientes corporativos críticos, incluindo a
-          implementação e manutenção de sistemas ERP.</p>
-        <p>Minha atuação combina conhecimento técnico em redes, servidores, segurança, banco de dados e suporte a
-          processos empresariais, com forte capacidade de conectar operação, dados e eficiência empresarial. Tenho
-          interesse crescente em aplicar essa base em projetos de dados, integração e transformação digital com foco em
-          resultados reais.</p>
-        <a class="linkedin-btn" href="https://www.linkedin.com/in/alexmiranda-silva/" target="_blank">Saiba mais</a>
-      </article>
+          <!-- Ações Principais -->
+          <div class="hero-actions">
+            <a href="https://wa.me/5571986168681" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.33 7.35 9.04 7.42 8.79 7.69C8.54 7.96 7.85 8.61 7.85 9.94C7.85 11.27 8.82 12.56 8.96 12.75C9.1 12.94 10.84 15.63 13.53 16.79C15.77 17.76 16.22 17.56 16.71 17.52C17.2 17.47 18.29 16.87 18.52 16.23C18.75 15.58 18.75 15.03 18.68 14.92C18.61 14.8 18.42 14.73 18.13 14.59C17.84 14.44 16.43 13.75 16.17 13.65C15.91 13.56 15.72 13.51 15.53 13.8C15.34 14.1 14.79 14.73 14.62 14.92C14.46 15.12 14.29 15.14 14 15C13.72 14.86 12.5 14.46 11.08 13.19C9.97 12.2 9.22 10.98 9 10.61C8.79 10.24 8.98 10.04 9.13 9.89C9.26 9.76 9.42 9.54 9.57 9.37C9.71 9.2 9.76 9.08 9.86 8.88C9.96 8.68 9.91 8.51 9.84 8.37C9.76 8.22 9.22 6.84 8.98 6.31C8.75 5.8 8.52 5.87 8.35 5.86L7.81 5.86C7.57 5.86 7.37 5.95 7.18 6.14C6.98 6.34 6.4 6.89 6.4 8.04C6.4 9.19 7.23 10.3 7.35 10.46"/>
+              </svg>
+              <span>Vamos Conversar</span>
+            </a>
+            <a href="#servicos" class="btn-secondary">
+              <span>Conhecer Soluções</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Grade de Indicadores de Maturidade -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+10</span>
+              <span class="stat-label">Anos de Experiência</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Foco em Disponibilidade</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">N2/N3</span>
+              <span class="stat-label">Suporte Especializado</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">TOTVS</span>
+              <span class="stat-label">Especialista Protheus</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- ⚙️ Seção Serviços -->
+    <!-- 👤 Seção Sobre / Trajetória Executiva -->
+    <section id="sobre" class="section-sobre">
+      <div class="section-container">
+        <div class="sobre-grid">
+          <div class="sobre-media">
+            <div class="image-frame">
+              <img class="qualificacao-img" src="static/img/qualificacao.png" alt="Qualificação Profissional de Alex Miranda">
+            </div>
+          </div>
+
+          <article class="sobre-texto">
+            <div class="section-badge">TRAJETÓRIA &middot; QUALIFICAÇÃO</div>
+            <h2 class="section-title">Experiência comprovada em TI corporativa crítica</h2>
+
+            <p class="paragraph-lead">
+              Bacharel em Sistemas de Informação e pós-graduado em Engenharia de Dados, com mais de uma década dedicada
+              à operação, sustentação e evolução de ambientes corporativos complexos.
+            </p>
+
+            <p class="paragraph-body">
+              Minha atuação combina domínio técnico em redes, servidores heterogêneos (Linux e Windows Server), bancos de dados e
+              segurança perimetral com a compreensão aprofundada dos fluxos de negócio dentro do ecossistema ERP TOTVS Protheus.
+            </p>
+
+            <p class="paragraph-body">
+              Acredito em uma TI estratégica, orientada a dados e focada na continuidade operacional: onde processos bem parametrizados,
+              cargas consistentes e infraestrutura de alta tolerância a falhas blindam a produtividade da organização.
+            </p>
+
+            <div class="sobre-pillars">
+              <div class="pillar-card">
+                <span class="pillar-icon">🛡️</span>
+                <div class="pillar-info">
+                  <h4>Infraestrutura Resiliente</h4>
+                  <p>Alta disponibilidade, mitigação de riscos e zero tolerância a gargalos operacionais.</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-icon">⚙️</span>
+                <div class="pillar-info">
+                  <h4>ERP Alinhado ao Negócio</h4>
+                  <p>Protheus rodando de forma ágil com parametrização consistente e dados auditáveis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sobre-cta-row">
+              <a class="btn-linkedin" href="https://www.linkedin.com/in/alexmiranda-silva/" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <span>Conectar no LinkedIn</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚙️ Seção Soluções Corporativas -->
     <section id="servicos" class="section-services">
-      <h2>Soluções Corporativas</h2>
-      <p>Atendimento completo em ERP, infraestrutura de TI, segurança da informação e diagnósticos técnicos.</p>
+      <div class="section-container">
+        <header class="section-header-center">
+          <div class="section-badge">SOLUÇÕES &middot; CONSULTORIA</div>
+          <h2 class="section-title">Especialidades Corporativas</h2>
+          <p class="section-subtitle">
+            Soluções completas para estruturar, proteger e escalar o ecossistema tecnológico da sua empresa.
+          </p>
+        </header>
 
-      <article class="service-card">
-        <h3>Suporte & Consultoria Protheus (TOTVS)</h3>
-        <p>Transformação e otimização da gestão empresarial através do sistema Protheus, garantindo que o ERP rode
-          alinhado aos processos do negócio.</p>
-        <ul>
-          <li>Parametrização de Módulos: Configuração e suporte nos módulos essenciais como SIGACOM (Compras), SIGAFAT
-            (Faturamento), SIGAEST (Estoque), SIGAFIN (Financeiro), SIGACFG (Configurador) e APSDU.</li>
-          <li>Migração e Carga de Dados (MILE): Importação, validação e saneamento de bases de dados utilizando a
-            ferramenta MILE, garantindo a integridade e consistência técnica das informações.</li>
-          <li>Sustentação e Atendimento: Suporte técnico N2/N3 focado na solução ágil de incidentes e apoio operacional
-            aos usuários e áreas de negócio.</li>
-        </ul>
-      </article>
+        <div class="services-grid">
+          <!-- Card 1: TOTVS Protheus -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-tag">TOTVS ERP</span>
+              <span class="service-number">01</span>
+            </div>
+            <h3>Suporte &amp; Consultoria Protheus</h3>
+            <p class="service-desc">
+              Otimização integral e sustentação do ERP TOTVS Protheus para assegurar processos fluidos e conformidade contábil-fiscal.
+            </p>
+            <ul class="service-list">
+              <li><strong>Parametrização Especializada:</strong> Configuração avançada nos módulos SIGACOM (Compras), SIGAFAT (Faturamento), SIGAEST (Estoque), SIGAFIN (Financeiro), SIGACFG e APSDU.</li>
+              <li><strong>Migração &amp; Carga via MILE:</strong> Estruturação, validação técnica e saneamento rigoroso de bases de dados legadas.</li>
+              <li><strong>Sustentação N2/N3:</strong> Atendimento ágil e consultivo diretamente conectado às lideranças de negócio.</li>
+            </ul>
+          </article>
 
-      <article class="service-card">
-        <h3>Gestão de Infraestrutura de TI</h3>
-        <p>Projeto, manutenção e padronização da infraestrutura tecnológica para garantir alta disponibilidade e
-          estabilidade.</p>
-        <ul>
-          <li>Administração de Servidores e Sistemas: Gestão e sustentação de ambientes heterogêneos em plataformas
-            Windows Server e Linux.</li>
-          <li>Redes e Conectividade: Configuração e suporte a redes LAN/WAN, Wi-Fi corporativo, DNS, DHCP, VPNs e
-            roteamento.</li>
-          <li>Virtualização e Ambiência: Implementação de ambientes virtualizados (VMware, VirtualBox) e conexão com
-            ambientes em nuvem (T-Cloud).</li>
-        </ul>
-      </article>
+          <!-- Card 2: Infraestrutura -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-tag">INFRAESTRUTURA</span>
+              <span class="service-number">02</span>
+            </div>
+            <h3>Gestão de Infraestrutura &amp; Servidores</h3>
+            <p class="service-desc">
+              Arquitetura, sustentação e padronização de servidores e ambientes de virtualização corporativa de alta criticidade.
+            </p>
+            <ul class="service-list">
+              <li><strong>Plataformas Heterogêneas:</strong> Sustentação avançada de ambientes corporativos Linux e Windows Server.</li>
+              <li><strong>Virtualização &amp; Nuvem:</strong> Implantação e gestão de ambientes virtualizados em VMware, VirtualBox e conexão T-Cloud.</li>
+              <li><strong>Conectividade Estruturada:</strong> Gerenciamento de redes LAN/WAN, Wi-Fi empresarial, servidores DNS e DHCP.</li>
+            </ul>
+          </article>
 
-      <article class="service-card">
-        <h3>Segurança da Informação & Continuidade de Negócios</h3>
-        <p>Proteção de ativos digitais corporativos para prevenir perdas de dados e paralisações operacionais.</p>
-        <ul>
-          <li>Gestão de Acessos e Identidades: Controle rigoroso de permissões e perfis de acesso para assegurar o
-            cumprimento de políticas de segurança.</li>
-          <li>Proteção de Perímetro: Implementação de regras de Firewall, VPNs seguras e mitigação de vulnerabilidades.
-          </li>
-          <li>Planos de Backup e Recuperação: Administração e validação de rotinas estratégicas de backup (diferencial,
-            incremental e cópias externas) para cenários de contingência e disaster recovery.</li>
-        </ul>
-      </article>
+          <!-- Card 3: Segurança -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-tag">CYBERSEGURANÇA</span>
+              <span class="service-number">03</span>
+            </div>
+            <h3>Segurança da Informação &amp; Perímetro</h3>
+            <p class="service-desc">
+              Proteção abrangente de ativos digitais para mitigar riscos, vulnerabilidades e paralisações não planejadas.
+            </p>
+            <ul class="service-list">
+              <li><strong>Gestão de Acessos &amp; IAM:</strong> Controle criterioso de perfis, auditoria de permissões e boas práticas de privilégio mínimo.</li>
+              <li><strong>Blindagem Perimetral:</strong> Implementação e auditoria de Firewalls corporativos e túneis seguros VPN IPSec/SSL.</li>
+              <li><strong>Hardening de Sistemas:</strong> Correção ativa de brechas e padronização de segurança em servidores de produção.</li>
+            </ul>
+          </article>
 
-      <article class="service-card">
-        <h3>Consultoria e Diagnóstico do Ambiente de TI</h3>
-        <p>Avaliação do cenário tecnológico para padronização e melhoria contínua dos processos de TI.</p>
-        <ul>
-          <li>Padronização de Ambientes: Organização e alinhamento da infraestrutura com as melhores práticas de
-            mercado.</li>
-          <li>Manutenção Preventiva e Corretiva: Gestão do parque de informática e redução de gargalos que impactam a
-            produtividade.</li>
-          <li>Recomendações Estratégicas: Elaboração de relatórios com sugestões práticas para aprimorar a performance,
-            segurança e escalabilidade do ambiente de TI.</li>
-        </ul>
-      </article>
+          <!-- Card 4: Diagnóstico e Continuidade -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-tag">CONTINUIDADE</span>
+              <span class="service-number">04</span>
+            </div>
+            <h3>Continuidade, Backup &amp; Diagnóstico</h3>
+            <p class="service-desc">
+              Elaboração de estratégias de contingência de desastres e avaliações preventivas do parque computacional.
+            </p>
+            <ul class="service-list">
+              <li><strong>Políticas de Backup 3-2-1:</strong> Gestão e testes reais de restauração (diferencial, incremental e armazenamento offsite).</li>
+              <li><strong>Plano de Disaster Recovery:</strong> Procedimentos formais para recuperação rápida em caso de sinistros operacionais.</li>
+              <li><strong>Auditoria &amp; Diagnóstico:</strong> Relatórios executivos com mapeamento de gargalos e planos práticos de modernização.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- 📈 Seção Casos de Sucesso -->
     <section id="casos" class="section-cases">
-      <h2>Casos de Sucesso</h2>
-      <p>Projetos com foco em transição de sistemas, melhoria de infraestrutura e continuidade segura de operações.</p>
+      <div class="section-container">
+        <header class="section-header-center">
+          <div class="section-badge">RESULTADOS &middot; IMPACTO</div>
+          <h2 class="section-title">Casos de Sucesso</h2>
+          <p class="section-subtitle">
+            Projetos reais onde método, experiência sênior e precisão técnica garantiram resultados comprovados.
+          </p>
+        </header>
 
-      <article class="service-card">
-        <h3>Implantação e Carga de Dados no ERP Protheus (TOTVS)</h3>
-        <p><strong>Cenário:</strong> Necessidade de estruturação e migração de dados operacionais e financeiros em
-          ambiente de produção com alta criticidade.</p>
-        <p><strong>Solução:</strong> Implantação e parametrização dos módulos de Compras (SIGACOM), Faturamento
-          (SIGAFAT), Estoque (SIGAEST), Financeiro (SIGAFIN) e Configurador (SIGACFG / APSDU). Execução da importação,
-          carga e validação técnica de dados utilizando a ferramenta MILE.</p>
-        <p><strong>Resultado:</strong> Garantia total de integridade e consistência das informações, permitindo a
-          transição segura para o ERP e assegurando a estabilidade nos processos de negócio.</p>
-      </article>
+        <div class="cases-grid">
+          <!-- Caso 1 -->
+          <article class="case-card">
+            <div class="case-header">
+              <span class="case-badge">ERP PROTHEUS</span>
+              <span class="case-metric">100% Integridade</span>
+            </div>
+            <h3>Implantação e Transição de Dados no ERP Protheus (TOTVS)</h3>
+            
+            <div class="case-block">
+              <span class="case-label">Cenário:</span>
+              <p>Necessidade crítica de estruturação, saneamento e migração de dados operacionais e financeiros em ambiente produtivo sem tolerância a paradas.</p>
+            </div>
 
-      <article class="service-card">
-        <h3>Fortalecimento da Segurança da Informação e Continuidade de Negócios</h3>
-        <p><strong>Cenário:</strong> Necessidade de elevar o nível de proteção dos ativos digitais e mitigar riscos em
-          ambientes corporativos multiclientes.</p>
-        <p><strong>Solução:</strong> Implementação de controle rigoroso de acesso e gerenciamento centralizado de
-          identidades. Identificação proativa de vulnerabilidades e aplicação de correções de segurança (hardening) em
-          servidores Windows e Linux. Reestruturação das rotinas estratégicas de backup.</p>
-        <p><strong>Resultado:</strong> Redução expressiva da vulnerabilidade do ambiente, proteção contra
-          incidentes/perda de dados e garantia de continuidade dos serviços sem interrupções operacionais.</p>
-      </article>
+            <div class="case-block">
+              <span class="case-label">Solução:</span>
+              <p>Parametrização precisa dos módulos de Compras, Faturamento, Estoque, Financeiro e Configurador. Execução de carga técnica, validação de regras de negócio e checagem cruzada com ferramenta MILE.</p>
+            </div>
 
-      <article class="service-card">
-        <h3>Padronização e Estabilização de Infraestrutura Multiclientes</h3>
-        <p><strong>Cenário:</strong> Ambientes de TI descentralizados e heterogêneos exigindo padronização, suporte
-          especializado e alta disponibilidade.</p>
-        <p><strong>Solução:</strong> Gestão e readequação de redes LAN/WAN, Wi-Fi corporativo, servidores DNS/DHCP e
-          políticas de Firewall/VPN. Atendimento de suporte N2/N3 focado na resolução rápida de problemas críticos
-          diretamente com os usuários e áreas de negócio. Consolidação e gerenciamento de ambientes virtualizados e
-          servidores corporativos.</p>
-        <p><strong>Resultado:</strong> Aumento relevante do uptime e estabilidade dos sistemas, redução do tempo de
-          resposta a chamados e padronização operacional do parque tecnológico.</p>
-      </article>
+            <div class="case-block case-result">
+              <span class="case-label">Resultado:</span>
+              <p>Migração segura com zero perda de registros, integridade contábil preservada e estabilidade imediata para a equipe operacional.</p>
+            </div>
+          </article>
+
+          <!-- Caso 2 -->
+          <article class="case-card">
+            <div class="case-header">
+              <span class="case-badge">SEGURANÇA DA INFORMAÇÃO</span>
+              <span class="case-metric">Risco Mitigado</span>
+            </div>
+            <h3>Fortalecimento de Segurança &amp; Continuidade Multiclientes</h3>
+            
+            <div class="case-block">
+              <span class="case-label">Cenário:</span>
+              <p>Ambientes corporativos expostos a vulnerabilidades, com controle de acesso descentralizado e rotinas de backup sem testes de validação.</p>
+            </div>
+
+            <div class="case-block">
+              <span class="case-label">Solução:</span>
+              <p>Implementação de controle centralizado de identidades, execução de hardening em servidores Windows e Linux, readequação de regras de Firewall e reestruturação do plano estratégico de backup.</p>
+            </div>
+
+            <div class="case-block case-result">
+              <span class="case-label">Resultado:</span>
+              <p>Redução drástica de incidentes de segurança, blindagem dos ativos críticos da empresa e contingência garantida sem paralisações.</p>
+            </div>
+          </article>
+
+          <!-- Caso 3 -->
+          <article class="case-card">
+            <div class="case-header">
+              <span class="case-badge">INFRAESTRUTURA</span>
+              <span class="case-metric">Alta Disponibilidade</span>
+            </div>
+            <h3>Padronização e Estabilização de TI Heterogênea</h3>
+            
+            <div class="case-block">
+              <span class="case-label">Cenário:</span>
+              <p>Parque tecnológico descentralizado e instável, gerando alto volume de chamados de suporte e gargalos no atendimento às filiais.</p>
+            </div>
+
+            <div class="case-block">
+              <span class="case-label">Solução:</span>
+              <p>Reestruturação completa de redes LAN/WAN, Wi-Fi corporativo, DNS/DHCP e consolidação de servidores virtualizados com suporte especializado N2/N3 focado na causa-raiz.</p>
+            </div>
+
+            <div class="case-block case-result">
+              <span class="case-label">Resultado:</span>
+              <p>Elevação significativa do uptime, padronização operacional de todo o parque e redução considerável no tempo médio de resposta a chamados.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- 📌 Painel Lateral Sticky -->
-    <aside class="perfil-destaques">
-      <h3>Destaques & Competências</h3>
+    <!-- 🛠️ Seção Arsenal Tecnológico & Competências -->
+    <section id="competencias" class="section-skills">
+      <div class="section-container">
+        <header class="section-header-center">
+          <div class="section-badge">HABILIDADES &middot; FERRAMENTAS</div>
+          <h2 class="section-title">Arsenal Tecnológico &amp; Competências</h2>
+          <p class="section-subtitle">
+            Tecnologias, metodologias e padrões operacionais dominados ao longo de mais de 10 anos de prática.
+          </p>
+        </header>
 
-      <h4>Formação & Experiência</h4>
-      <ul>
-        <li>+10 anos em Infraestrutura e TI Crítica</li>
-        <li>Pós-Graduado em Engenharia de Dados</li>
-        <li>Bacharel em Sistemas de Informação</li>
-      </ul>
+        <div class="skills-grid">
+          <!-- Bloco ERP -->
+          <div class="skill-category">
+            <h4>TOTVS Protheus &amp; ERP</h4>
+            <div class="tags-container">
+              <span class="tech-tag">TOTVS Protheus</span>
+              <span class="tech-tag">MILE (Carga de Dados)</span>
+              <span class="tech-tag">APSDU</span>
+              <span class="tech-tag">SIGACFG</span>
+              <span class="tech-tag">SIGACOM (Compras)</span>
+              <span class="tech-tag">SIGAFAT (Faturamento)</span>
+              <span class="tech-tag">SIGAEST (Estoque)</span>
+              <span class="tech-tag">SIGAFIN (Financeiro)</span>
+            </div>
+          </div>
 
-      <h4>Principais Tecnologias</h4>
-      <ul>
-        <li>TOTVS Protheus (MILE, APSDU, SIGACFG)</li>
-        <li>Linux & Windows Server</li>
-        <li>Redes corporativas, VPNs e Firewalls</li>
-        <li>Virtualização (VMware, T-Cloud)</li>
-      </ul>
-    </aside>
+          <!-- Bloco Infraestrutura & Servidores -->
+          <div class="skill-category">
+            <h4>Infraestrutura &amp; Servidores</h4>
+            <div class="tags-container">
+              <span class="tech-tag">Linux (Debian/Ubuntu/CentOS)</span>
+              <span class="tech-tag">Windows Server</span>
+              <span class="tech-tag">Active Directory &amp; GPO</span>
+              <span class="tech-tag">VMware ESXi</span>
+              <span class="tech-tag">VirtualBox</span>
+              <span class="tech-tag">T-Cloud Corporativo</span>
+              <span class="tech-tag">DNS &amp; DHCP Server</span>
+            </div>
+          </div>
 
+          <!-- Bloco Dados & Engenharia -->
+          <div class="skill-category">
+            <h4>Engenharia de Dados &amp; Bancos</h4>
+            <div class="tags-container">
+              <span class="tech-tag">Engenharia de Dados</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Modelagem de Dados</span>
+              <span class="tech-tag">Saneamento &amp; Carga (ETL)</span>
+              <span class="tech-tag">Integridade Referencial</span>
+            </div>
+          </div>
+
+          <!-- Bloco Segurança & Redes -->
+          <div class="skill-category">
+            <h4>Redes, Segurança &amp; Governança</h4>
+            <div class="tags-container">
+              <span class="tech-tag">Firewall Perimetral</span>
+              <span class="tech-tag">VPN IPSec / SSL</span>
+              <span class="tech-tag">Redes LAN / WAN</span>
+              <span class="tech-tag">Segmentação de VLANs</span>
+              <span class="tech-tag">Políticas de Backup 3-2-1</span>
+              <span class="tech-tag">Disaster Recovery (DRP)</span>
+              <span class="tech-tag">Suporte Técnico N2/N3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- 🦶 Rodapé -->
+  <!-- 🦶 Rodapé Executivo / Contato -->
   <footer class="site-footer" id="contato">
-    <p>Entre em contato para consultoria, implantação ou suporte de TI.</p>
-    <p>Email: <a href="mailto:contato@mirandatecnologia.com.br">contato@mirandatecnologia.com.br</a></p>
+    <div class="footer-content">
+      <div class="footer-copy">
+        <p class="footer-eyebrow">CONTATO &middot; CONSULTORIA</p>
+        <h2>Pronto para elevar o nível da sua TI?</h2>
+        <p>
+          Entre em contato para consultoria estratégica, implantação ou sustentação especializada em ERP TOTVS Protheus e Infraestrutura Crítica.
+        </p>
+      </div>
+
+      <div class="footer-actions">
+        <!-- WhatsApp -->
+        <a class="footer-card footer-card-whatsapp" href="https://wa.me/5571986168681" target="_blank" rel="noopener noreferrer">
+          <span class="footer-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.33 7.35 9.04 7.42 8.79 7.69C8.54 7.96 7.85 8.61 7.85 9.94C7.85 11.27 8.82 12.56 8.96 12.75C9.1 12.94 10.84 15.63 13.53 16.79C15.77 17.76 16.22 17.56 16.71 17.52C17.2 17.47 18.29 16.87 18.52 16.23C18.75 15.58 18.75 15.03 18.68 14.92C18.61 14.8 18.42 14.73 18.13 14.59C17.84 14.44 16.43 13.75 16.17 13.65C15.91 13.56 15.72 13.51 15.53 13.8C15.34 14.1 14.79 14.73 14.62 14.92C14.46 15.12 14.29 15.14 14 15C13.72 14.86 12.5 14.46 11.08 13.19C9.97 12.2 9.22 10.98 9 10.61C8.79 10.24 8.98 10.04 9.13 9.89C9.26 9.76 9.42 9.54 9.57 9.37C9.71 9.2 9.76 9.08 9.86 8.88C9.96 8.68 9.91 8.51 9.84 8.37C9.76 8.22 9.22 6.84 8.98 6.31C8.75 5.8 8.52 5.87 8.35 5.86L7.81 5.86C7.57 5.86 7.37 5.95 7.18 6.14C6.98 6.34 6.4 6.89 6.4 8.04C6.4 9.19 7.23 10.3 7.35 10.46"/>
+            </svg>
+          </span>
+          <div class="footer-card-info">
+            <span class="footer-card-label">WhatsApp</span>
+            <span class="footer-card-value">(71) 98616-8681</span>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a class="footer-card footer-card-email footer-email" href="mailto:contato@mirandatecnologia.com.br">
+          <span class="footer-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </span>
+          <div class="footer-card-info">
+            <span class="footer-card-label footer-email-label">Envie um e-mail</span>
+            <span class="footer-card-value footer-email-address">contato@mirandatecnologia.com.br</span>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="footer-card footer-card-linkedin" href="https://www.linkedin.com/in/alexmiranda-silva/" target="_blank" rel="noopener noreferrer">
+          <span class="footer-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </span>
+          <div class="footer-card-info">
+            <span class="footer-card-label">LinkedIn</span>
+            <span class="footer-card-value">alexmiranda-silva</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Alex Miranda &middot; Miranda Tecnologia Empresarial. Todos os direitos reservados.</p>
+      <a href="#topo" class="back-to-top">
+        <span>Voltar ao topo</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </a>
+    </div>
   </footer>
 
 </body>
