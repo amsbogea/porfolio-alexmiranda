@@ -95,6 +95,29 @@ button {
   background: none;
 }
 
+/* Accessible Keyboard Navigation Focus Visible Indicators */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.nav-cta:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-linkedin:focus-visible {
+  outline: 2px solid var(--accent-cyan-hover);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+.footer-card:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: 18px;
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
