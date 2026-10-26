@@ -95,6 +95,31 @@ button {
   background: none;
 }
 
+/* Accessible focus-visible outline for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Skip to content link for keyboard & screen-reader users */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 20px;
+  background-color: var(--accent-cyan);
+  color: var(--bg-base);
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: top var(--transition-fast);
+}
+
+.skip-to-content:focus {
+  top: 16px;
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
