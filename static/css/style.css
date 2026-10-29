@@ -95,6 +95,27 @@ button {
   background: none;
 }
 
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible,
+.nav-brand:focus-visible,
+.nav-cta:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-linkedin:focus-visible,
+.footer-card:focus-visible,
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
