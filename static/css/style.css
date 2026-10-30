@@ -95,6 +95,17 @@ button {
   background: none;
 }
 
+/* Accessible focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
