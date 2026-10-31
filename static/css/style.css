@@ -51,6 +51,40 @@
 }
 
 /* ==========================================================================
+   ACESSIBILIDADE: SKIP LINK & FOCUS VISIBLE
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: var(--bg-surface-elevated);
+  color: var(--accent-cyan);
+  border: 2px solid var(--accent-cyan);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus-visible {
+  top: 16px;
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* ==========================================================================
    RESET & CONFIGURAÇÕES GERAIS
    ========================================================================== */
 
