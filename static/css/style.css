@@ -95,6 +95,33 @@ button {
   background: none;
 }
 
+/* Indicadores de Foco Acessíveis */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Atalho Acessível (Skip Link) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 24px;
+  z-index: 2000;
+  padding: 12px 20px;
+  background: var(--bg-surface-elevated);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-focus);
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
