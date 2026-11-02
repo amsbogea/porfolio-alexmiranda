@@ -18,6 +18,9 @@
 
 <body>
 
+  <!-- Atalho de Acessibilidade: Pular para o Conteúdo Principal -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- 🧭 Barra de Navegação Executiva Fixa -->
   <header class="header-nav" id="topo">
     <div class="nav-container">
@@ -26,7 +29,7 @@
         <span class="brand-badge">TI &middot; ERP &middot; DADOS</span>
       </a>
 
-      <nav class="nav-menu">
+      <nav class="nav-menu" aria-label="Navegação principal">
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#servicos" class="nav-link">Soluções</a>
         <a href="#casos" class="nav-link">Casos de Sucesso</a>
@@ -44,7 +47,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="conteudo-principal" tabindex="-1">
     <!-- ⚡ Hero Section / Banner de Fundo de Alto Impacto -->
     <section id="apresentacao" class="hero-section">
       <div class="hero-container">
