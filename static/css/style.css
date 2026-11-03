@@ -95,6 +95,38 @@ button {
   background: none;
 }
 
+/* Link de salto para acessibilidade */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: var(--bg-surface-elevated);
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid var(--accent-cyan);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md), 0 0 20px var(--accent-glow);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 16px;
+  outline: none;
+}
+
+/* Acessibilidade de Foco via Teclado */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+#conteudo-principal:focus {
+  outline: none;
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
