@@ -62,6 +62,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-size: 16px;
   background-color: var(--bg-base);
 }
@@ -93,6 +94,43 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+/* Indicadores de foco visível para acessibilidade e navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.nav-link:focus-visible,
+.nav-cta:focus-visible,
+.footer-card:focus-visible,
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Link de Acessibilidade (Skip to Content) */
+.skip-link {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background-color: var(--accent-cyan);
+  color: var(--bg-base);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--accent-glow);
+  transform: translateY(-160%);
+  transition: transform var(--transition-fast), outline var(--transition-fast);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #FFFFFF;
+  outline-offset: 2px;
 }
 
 /* ==========================================================================
