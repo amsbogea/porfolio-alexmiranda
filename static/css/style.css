@@ -95,6 +95,62 @@ button {
   background: none;
 }
 
+/* Link de Acessibilidade / Pular para o Conteúdo Principal */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-card);
+  color: var(--accent-cyan);
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid var(--accent-cyan);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px var(--accent-glow);
+  z-index: 2000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus-visible,
+.skip-link:focus {
+  top: 0;
+  outline: none;
+}
+
+/* Indicadores de Foco para Navegação por Teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.nav-cta:focus-visible,
+.btn-linkedin:focus-visible {
+  border-radius: 999px;
+}
+
+/* Compensação do Cabeçalho Fixo ao Navegar por Âncoras */
+section[id],
+footer[id] {
+  scroll-margin-top: 88px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* ==========================================================================
    BARRA DE NAVEGAÇÃO FIXA (HEADER NAV)
    ========================================================================== */
